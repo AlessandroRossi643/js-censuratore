@@ -10,25 +10,18 @@ function divideInArray(elenco){
 }
 
 //Richiamo la funzione per dividere i due input in degli array
-divideInArray(testoutente);
-divideInArray(elencoparole);
-
-var testodiviso=(divideInArray(testoutente));
+var testodiviso=divideInArray(testoutente);
 console.log(testodiviso);
-var wordcensured=(divideInArray(elencoparole));
+var wordcensured=divideInArray(elencoparole);
 console.log(wordcensured);
 
-// Creazione array parole censurate
-var lista_censure=[];
-var parole_testo=[];
 
-//Funzione per confrontare le parole dell'array
+//Funzione per confrontare le parole censurate con le parole del testo
 function confrontoArray(array1,array2){
   for (var i = 0; i < array1.length; i++) {
-    if (array1[i]==array2[i]) {
-      alert("ciao");
+    if (array1[i]===array2[i]) {
+      alert("no");
     }
   }
 }
-confrontoArray(parole_testo,lista_censure);
-console.log(parole_testo);
+confrontoArray(testodiviso,wordcensured);
