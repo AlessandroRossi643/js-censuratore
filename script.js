@@ -1,8 +1,10 @@
 //Inserimento del testo da parte dell'utente
 var testoutente=prompt("Inserisci un testo");
+console.log("TESTO ORIGINALE INSERITO DALL'UTENTE: " + testoutente);
 
 //Inserimento delle parole che devono essere censurate
 var elencoparole=prompt("Inserisci un elenco di parole");
+console.log("ELENCO PAROLE CENSURATE: " + elencoparole);
 
 //Funzione che mi permette di dividere il testo in un array
 function divideInArray(elenco){
@@ -46,6 +48,10 @@ function confrontoArray(array1,array2){
   return punteggio;
 }
 
+// Richiamo la funzione confronto inserendo i due array
 var result=confrontoArray(testodiviso,wordcensured);
-document.writeln(testodiviso.join(' '));
-console.log(result);
+
+console.log("IL TESTO CENSURATO: " + testodiviso.join(' '))
+console.log("BADWORD INDEX: " + result)
+document.getElementById('testocensurato').innerHTML=testodiviso.join(' ');
+document.getElementById('punteggio').innerHTML="BADWORD INDEX: " + result;
