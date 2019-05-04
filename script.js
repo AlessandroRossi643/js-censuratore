@@ -20,6 +20,7 @@ console.log(wordcensured);
 function confrontoArray(array1,array2){
 
   var i, j, x, censura, punteggio;
+  punteggio=0;
 
   // Ciclo che mi serve per scorrere tutti i valori del primo array
   for (var i = 0; i < array1.length; i++) {
@@ -42,15 +43,9 @@ function confrontoArray(array1,array2){
       }
     }
   }
-
   return punteggio;
 }
 
-confrontoArray(testodiviso,wordcensured);
-
-// Funzione che mi permette dato un array di stringhe di riunirlo in un solo testo
-// function joininaString(array){
-//   return array.join(' ');
-// }
-// joininaString(testodiviso);
+var result=confrontoArray(testodiviso,wordcensured);
 document.writeln(testodiviso.join(' '));
+console.log(result);
