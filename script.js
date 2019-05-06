@@ -50,8 +50,15 @@ function confrontoArray(array1,array2){
 
 // Richiamo la funzione confronto inserendo i due array
 var result=confrontoArray(testodiviso,wordcensured);
+var bwordindex=0;
+if (testodiviso.length!=0) {
+  var bwordindex=result/testodiviso.length;
+}
+else {
+  bwordindex=0;
+}
 
 console.log("IL TESTO CENSURATO: " + testodiviso.join(' '))
-console.log("BADWORD INDEX: " + result)
+console.log("BADWORD INDEX: " + bwordindex)
 document.getElementById('testocensurato').innerHTML=testodiviso.join(' ');
-document.getElementById('punteggio').innerHTML="BADWORD INDEX: " + result;
+document.getElementById('punteggio').innerHTML="BADWORD INDEX: " + bwordindex;
